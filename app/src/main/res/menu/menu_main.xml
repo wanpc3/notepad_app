@@ -6,6 +6,10 @@
             android:icon="@android:drawable/ic_dialog_email"
             android:title="Inbox" />
         <item
+            android:id="@+id/taskFragment"
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:title="Take Note Now" />
+        <item
             android:id="@+id/sentItemsFragment"
             android:icon="@android:drawable/ic_menu_send"
             android:title="Sent Items" />

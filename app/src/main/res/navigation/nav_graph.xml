@@ -12,6 +12,11 @@
         android:label="Inbox"
         tools:layout="@layout/fragment_inbox" />
     <fragment
+        android:id="@+id/taskFragment"
+        android:name="com.ilhanidriss.take_note_now.TasksFragment"
+        android:label="Take Note Now"
+        tools:layout="@layout/fragment_tasks" />
+    <fragment
         android:id="@+id/helpFragment"
         android:name="com.ilhanidriss.take_note_now.HelpFragment"
         android:label="Help"
