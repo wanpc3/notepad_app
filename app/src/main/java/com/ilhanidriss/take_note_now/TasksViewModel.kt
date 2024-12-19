@@ -9,6 +9,19 @@ import kotlinx.coroutines.launch
 
 class TasksViewModel(val dao: TaskDao): ViewModel() {
 
+    /*
+    var newTaskName = ""
+    val tasks = dao.getAll()
+
+    fun addTask() {
+        viewModelScope.launch {
+            val task = Task()
+            task.taskName = newTaskName
+            dao.insert(task)
+        }
+    }
+    */
+
     //Expose tasks as LiveData
     val tasks: LiveData<List<Task>> = dao.getAll()
 
@@ -23,14 +36,4 @@ class TasksViewModel(val dao: TaskDao): ViewModel() {
             }
         }
     }
-
-    /*
-    fun addTask() {
-        viewModelScope.launch {
-            val task = Task()
-            task.taskName = newTaskName
-            dao.insert(task)
-        }
-    }
-    */
 }

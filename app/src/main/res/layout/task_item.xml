@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <data>
+        <variable
+            name="task"
+            type="com.ilhanidriss.take_note_now.Task" />
+    </data>
+
+<androidx.cardview.widget.CardView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
@@ -18,7 +26,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            android:padding="8dp" />
+            android:padding="8dp"
+            android:text="@{task.taskName}" />
 
     <CheckBox
         android:id="@+id/task_done"
@@ -27,7 +36,8 @@
         android:textSize="16sp"
         android:padding="8dp"
         android:clickable="false"
-        android:text="Done?" />
-
+        android:text="Done?"
+        android:checked="@{task.taskDone}" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>
+</layout>
